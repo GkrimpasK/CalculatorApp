@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/CalculatorTheme_Dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/imgBtnScientific"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background= "#00000000"
+        android:contentDescription="scientific"
+        android:src="@drawable/scientific_dark"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnThemes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgBtnThemes"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:background="#00000000"
+        android:contentDescription="themes"
+        android:src="@drawable/themes_dark"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnHistory"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnScientific"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgBtnHistory"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#00000000"
+        android:contentDescription="history"
+        android:src="@drawable/history_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnThemes"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/almostWhite"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/displayText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/displayText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="12dp"
+        android:autoSizeStepGranularity="2sp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="@color/almostWhite"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSymDivide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNum0"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/num_shape"
+        android:text="0"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnNum2"
+        app:layout_constraintStart_toStartOf="@+id/btnNum1" />
+
+    <Button
+        android:id="@+id/btnNum1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="1"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum0"
+        app:layout_constraintEnd_toStartOf="@+id/btnNum2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNum2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="2"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum0"
+        app:layout_constraintEnd_toStartOf="@+id/btnNum3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum1" />
+
+    <Button
+        android:id="@+id/btnNum3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="3"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSymDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/btnSymPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum2" />
+
+    <Button
+        android:id="@+id/btnNum4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="4"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum1"
+        app:layout_constraintEnd_toStartOf="@+id/btnNum5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNum5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="5"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum2"
+        app:layout_constraintEnd_toStartOf="@+id/btnNum6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum4" />
+
+    <Button
+        android:id="@+id/btnNum6"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="6"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum3"
+        app:layout_constraintEnd_toStartOf="@+id/btnSymMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum5" />
+
+    <Button
+        android:id="@+id/btnNum7"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="7"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum4"
+        app:layout_constraintEnd_toStartOf="@+id/btnNum8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNum8"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/num_shape"
+        android:text="8"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum5"
+        app:layout_constraintEnd_toStartOf="@+id/btnNum9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum7" />
+
+    <Button
+        android:id="@+id/btnNum9"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/num_shape"
+        android:text="9"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum6"
+        app:layout_constraintEnd_toStartOf="@+id/btnSymMultiply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum8" />
+
+    <Button
+        android:id="@+id/btnSymDecimal"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/num_shape"
+        android:text="."
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSymPlus"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/btnNum0" />
+
+    <Button
+        android:id="@+id/btnSymEqual"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/sym_shape"
+        android:text="="
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnSymPlus"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sym_shape"
+        android:text="+"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSymEqual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum3" />
+
+    <Button
+        android:id="@+id/btnSymMinus"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sym_shape"
+        android:text="-"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSymPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum6" />
+
+    <Button
+        android:id="@+id/btnSymMultiply"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sym_shape"
+        android:text="×"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSymMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnNum9" />
+
+    <Button
+        android:id="@+id/btnSymDivide"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/sym_shape"
+        android:text="÷"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSymMultiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSymPercent" />
+
+    <Button
+        android:id="@+id/btnSymPercent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sym_shape"
+        android:text="%"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum9"
+        app:layout_constraintEnd_toStartOf="@+id/btnSymDivide"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSymDel" />
+
+    <Button
+        android:id="@+id/btnSymDel"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sym_shape"
+        android:text="⌫"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum8"
+        app:layout_constraintEnd_toStartOf="@+id/btnSymPercent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSymClear" />
+
+    <Button
+        android:id="@+id/btnSymClear"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sym_shape"
+        android:text="C"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnNum7"
+        app:layout_constraintEnd_toStartOf="@+id/btnSymDel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

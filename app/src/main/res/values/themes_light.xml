@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="CalculatorTheme_Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="android:textColor">@color/metallicGray</item>
+    </style>
+
+</resources>

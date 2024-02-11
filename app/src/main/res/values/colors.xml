@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="metallicGray">#4E4D4A</color>
+    <color name="softMetallicGray">#807E79</color>
+    <color name="softGray">#E6E6E3</color>
+    <color name="almostWhite">#E2E8F0</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="softBlue">#C5E3EC</color>
+    <color name="babyBlue">#89CFF0</color>
+    <color name="sandyTeal">#C8D3D4</color>
+    <color name="deepTeal">#1A2DD4BF</color>
+    <color name="teal">#5EEAD4</color>
+    <color name="deepBlue">#0A192F</color>
+    <color name="deepPurple">#513859</color>
+    <color name="orange">#FCA03D</color>
+
+</resources>

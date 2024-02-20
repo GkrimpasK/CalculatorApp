@@ -71,21 +71,24 @@ class Formatter {
         // Allows only 10 decimal points
         var formattedResult = "%.10f".format( calculation.toDouble() )
 
+        // Handles special decimal cases
+        if (formattedResult.contains(",") ) formattedResult = formattedResult.replace(",", ".")
+
         // Remove leading zeros
         while ( formattedResult.last() == '0' ) formattedResult = formattedResult.dropLast(1)
         if ( formattedResult.last() == '.' || formattedResult.last() == ',' ) formattedResult = formattedResult.dropLast(1)
 
-        //Handles special number cases
+        // Handles special number cases
         if (formattedResult.length > 16 || formattedResult == "-0") { return "error" }
 
         // Handles division by zero
         else if(formattedResult == "Infinity" || formattedResult == "NaN") { return "infinity_error" }
 
-        Log.d("check", "Res before commas: $formattedResult")
+        Log.d("check", "Formatted result before commas: $formattedResult")
 
         formattedResult = addCommas(formattedResult)
 
-        Log.d("check", "Res after commas: $formattedResult")
+        Log.d("check", "Formatted result after commas: $formattedResult")
 
         return formattedResult
 

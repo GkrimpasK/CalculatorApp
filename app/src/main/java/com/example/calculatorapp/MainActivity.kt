@@ -9,7 +9,7 @@ import com.example.calculatorapp.controllers.MainController
 
 class MainActivity : AppCompatActivity() {
 
-    private val controller = MainController()
+    private val controller = MainController(this)
 
     private lateinit var binding: ActivityMainBinding
 

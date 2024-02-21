@@ -3,9 +3,9 @@ package com.example.calculatorapp.controllers
 import com.example.calculatorapp.MainActivity
 import com.example.calculatorapp.models.MainModel
 
-class MainController {
+class MainController(mainActivity: MainActivity) {
 
-    var mainView: MainActivity = MainActivity()
+    var mainView: MainActivity = mainActivity
     var mainModel: MainModel = MainModel()
 
     /*
